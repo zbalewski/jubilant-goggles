@@ -2,7 +2,7 @@
 import sys
 from setuptools import setup
 
-VERSION = '0.0.1'
+VERSION = '0.0.2'
 DESCRIPTION = "AY250 HW3: evaluate numeric string expressions."
 
 CLASSIFIERS = list(filter(None, map(str.strip,
@@ -34,5 +34,6 @@ setup(
         packages=['calcalc', 'calcalc.tests'],
         platforms=['any'],
         setup_requires=['pytest-runner'],
-        tests_require=['pytest']
+        tests_require=['pytest'],
+        install_requires=['numexpr', 'urllib3', 'requests']
 )
